@@ -17,10 +17,13 @@ export class CreateClientUseCase {
       },
     });
 
-    await prismaClient.client.create({
+    if (customer) throw new Error("Customer already exists.");
+
+    const customerCreated = await prismaClient.client.create({
       data: {
         ...data,
       },
     });
+    return customerCreated;
   }
 }
