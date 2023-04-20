@@ -1,4 +1,3 @@
-import { Customer } from "@prisma/client";
 import { kafkaConsumer } from "../kafka.consumer";
 import { prismaClient } from "../../../database/prismaClient";
 
