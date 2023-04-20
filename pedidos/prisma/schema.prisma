@@ -16,3 +16,11 @@ model Customer {
   externalId String
   email String @unique
 }
+
+model Product {
+  id String @id @default(uuid())
+  externalId String
+  code String
+
+  @@map("products")
+}
