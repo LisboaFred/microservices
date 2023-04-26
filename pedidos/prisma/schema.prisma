@@ -10,7 +10,6 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
-
 model Customer {
   id String @id @default(uuid())
   externalId String
@@ -35,6 +34,7 @@ model Order {
   customerId String
   createdAt DateTime @default(now())
   OrderItems OrderItems[]
+  status String
 
   @@map("orders")
 }
