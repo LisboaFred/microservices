@@ -1,5 +1,5 @@
 import express, { Router } from "express";
-import { router } from "./routes";
+import { router } from "./infra/routes";
 
 const PORT = process.env.PORT ?? 3003;
 

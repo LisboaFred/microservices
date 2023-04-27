@@ -1,5 +1,6 @@
 import express, { Router } from "express";
 import { router } from "./infra/routes";
+import "./provider/kafka/consumers";
 
 const PORT = process.env.PORT ?? 3001;
 
